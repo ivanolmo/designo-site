@@ -1,0 +1,20 @@
+---
+export interface Props {
+  title: string;
+  link: string;
+  imgSrc: string;
+}
+
+const { title, link, imgSrc } = Astro.props as Props;
+---
+
+<div
+  class='flex flex-col items-center gap-3 uppercase text-white py-24 rounded-2xl bg-cover'
+  style={{ backgroundImage: `url(/assets/mobile/image-${imgSrc}-design.jpg)` }}
+>
+  <h2>{title}</h2>
+  <div class='flex items-center gap-5 text-[0.9375rem] tracking-[5px]'>
+    <a href={link}>View Projects</a>
+    <img src='/assets/shared/icon-right-arrow.svg' alt='right arrow' />
+  </div>
+</div>
