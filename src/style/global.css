@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-sans text-[0.9375rem] md:text-base font-normal leading-[1.66] md:leading-relaxed;
+    @apply font-sans text-base font-normal leading-[1.66] md:leading-relaxed;
   }
 
   h1 {
