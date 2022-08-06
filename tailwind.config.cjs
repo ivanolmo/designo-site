@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -17,6 +18,9 @@ module.exports = {
         200: '#f1f3f5',
         800: '#333136',
       },
+    },
+    fontFamily: {
+      sans: ['Jost', ...defaultTheme.fontFamily.sans],
     },
     extend: {},
   },
