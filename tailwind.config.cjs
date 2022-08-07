@@ -22,7 +22,11 @@ module.exports = {
     fontFamily: {
       sans: ['Jost', ...defaultTheme.fontFamily.sans],
     },
-    extend: {},
+    extend: {
+      dropShadow: {
+        'hero-mobile': '40px -20px 60px rgba(40, 0, 0, 0.6)',
+      },
+    },
   },
   plugins: [],
 };
