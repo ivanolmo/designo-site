@@ -1,45 +1,94 @@
 ---
-import '../style/global.css';
+import MainLayout from '@/layouts/MainLayout.astro';
+import ProjectCard from '@/components/ProjectCard.astro';
+import GetInTouch from '@/components/GetInTouch.astro';
+import '@/style/global.css';
 ---
 
-<!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <link rel='preconnect' href='https://fonts.googleapis.com' />
-    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
-    <link
-      href='https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap'
-      rel='stylesheet'
+<MainLayout>
+  <section
+    class='flex flex-col items-center gap-3.5 bg-peach-600 px-6 pt-20 text-white text-center bg-[url("/assets/shared/bg-pattern-hero-home.svg")] bg-[top_100px_left] bg-no-repeat overflow-hidden'
+  >
+    <h1>Award-winning custom designs and digital branding solutions</h1>
+    <p>
+      With over 10 years in the industry, we are experienced in creating fully
+      responsive websites, app design, and engaging brand experiences. Find out
+      more about our services.
+    </p>
+    <div class='px-6 py-4 mt-3 bg-white text-black rounded-lg w-fit'>
+      <a href='#' class='btn btn-primary uppercase font-medium'>Learn More</a>
+    </div>
+    <div class='mt-16 px-6'>
+      <img
+        src='/assets/mobile/image-hero-phone-mobile.png'
+        alt='phone image'
+        class='hero-img drop-shadow-hero-mobile'
+      />
+    </div>
+  </section>
+  <section class='flex flex-col gap-6 px-6 mt-28'>
+    <ProjectCard title='Web Design' link='/web-design' imgSrc='web' />
+    <ProjectCard title='App Design' link='/app-design' imgSrc='app' />
+    <ProjectCard title='Graphic Design' link='/graphic-design' imgSrc='graphic'
     />
-    <title>Designo</title>
-  </head>
-  <body>
-    <header>
-      <div class='flex'>
-        <div>
-          <img src='/assets/shared/logo-dark.png' alt='' class='block h-7' />
-        </div>
-        <img src='/assets/mobile/icon-hamburger.svg' alt='' />
+  </section>
+  <section class='flex flex-col items-center gap-20 px-6 mt-28'>
+    <div class='flex flex-col items-center gap-12'>
+      <div
+        class='bg-[url("/assets/shared/bg-pattern-small-circle.svg")] bg-no-repeat'
+      >
+        <img
+          src='/assets/shared/illustration-passionate.svg'
+          alt='passionate illustration'
+        />
       </div>
-      <nav>
-        <ul role='list' class='flex invisible'>
-          <li>
-            <a href='#'>Our Company</a>
-          </li>
-          <li>
-            <a href='#'>Locations</a>
-          </li>
-          <li>
-            <a href='#'>Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <h1>Hello World!</h1>
-    </main>
-  </body>
-</html>
+      <div class='text-center'>
+        <h3 class='uppercase font-medium'>Passionate</h3>
+        <p>
+          Each project starts with an in-depth brand research to ensure we only
+          create products that serve a purpose. We merge art, design, and
+          technology into exciting new solutions.
+        </p>
+      </div>
+    </div>
+    <div class='flex flex-col items-center gap-12'>
+      <div
+        class='bg-[url("/assets/shared/bg-pattern-small-circle.svg")] bg-no-repeat'
+      >
+        <img
+          src='/assets/shared/illustration-resourceful.svg'
+          alt='resourceful illustration'
+        />
+      </div>
+      <div class='text-center'>
+        <h3 class='uppercase font-medium'>Resourceful</h3>
+        <p>
+          Everything that we do has a strategic purpose. We use an agile
+          approach in all of our projects and value customer collaboration. It
+          guarantees superior results that fulfill our clients’ needs.
+        </p>
+      </div>
+    </div>
+    <div class='flex flex-col items-center gap-12'>
+      <div
+        class='bg-[url("/assets/shared/bg-pattern-small-circle.svg")] bg-no-repeat'
+      >
+        <img
+          src='/assets/shared/illustration-friendly.svg'
+          alt='friendly illustration'
+        />
+      </div>
+      <div class='text-center'>
+        <h3 class='uppercase font-medium'>Friendly</h3>
+        <p>
+          We are a group of enthusiastic folks who know how to put people first.
+          Our success depends on our customers, and we strive to give them the
+          best experience a company can provide.
+        </p>
+      </div>
+    </div>
+  </section>
+  <div class='px-6 mt-28'>
+    <GetInTouch />
+  </div>
+</MainLayout>
