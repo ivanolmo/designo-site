@@ -18,4 +18,8 @@
   h3 {
     @apply text-xl font-medium leading-snug tracking-[5px];
   }
+
+  h4 {
+    @apply text-sm leading-none tracking-[2px];
+  }
 }
