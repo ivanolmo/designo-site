@@ -1,0 +1,54 @@
+---
+import GetInTouch from '@/components/GetInTouch.astro';
+---
+
+<footer>
+  <div class='bg-black px-6 py-16 mt-80'>
+    {
+      Astro.url.pathname !== '/contact' && (
+        <div class='-mt-64'>
+          <GetInTouch />
+        </div>
+      )
+    }
+    <div class='mt-16 border-b-2 border-gray-800'>
+      <div class='px-16 pb-8'>
+        <img src='/assets/shared/logo-light.png' alt='logo' />
+      </div>
+    </div>
+    <section class='flex flex-col items-center gap-10 mt-8'>
+      <div class='flex flex-col items-center gap-8 text-white uppercase'>
+        <h4><a href='/about'>Our Company</a></h4>
+        <h4><a href='/locations'>Locations</a></h4>
+        <h4><a href='/contact'>Contact</a></h4>
+      </div>
+      <div class='flex flex-col items-center gap-2 text-gray-200 text-base'>
+        <p><span class='font-bold'>Designo Central Office</span></p>
+        <p><span>3886 Wellington Street</span></p>
+        <p><span>Toronto, Ontario M9C 3J5</span></p>
+      </div>
+      <div class='flex flex-col items-center gap-2 text-gray-200 text-base'>
+        <p><span class='font-bold'>Contact Us (Central Office)</span></p>
+        <p><span>P: +1 253-863-8967</span></p>
+        <p><span>M : contact@designo.co</span></p>
+      </div>
+      <div class='flex justify-center items-center gap-4'>
+        <a href='https://facebook.com' target='_blank'>
+          <img src='/assets/shared/icon-facebook.svg' alt='facebook' />
+        </a>
+        <a href='https://youtube.com' target='_blank'>
+          <img src='/assets/shared/icon-youtube.svg' alt='youtube' />
+        </a>
+        <a href='https://twitter.com' target='_blank'>
+          <img src='/assets/shared/icon-twitter.svg' alt='twitter' />
+        </a>
+        <a href='https://pinterest.com' target='_blank'>
+          <img src='/assets/shared/icon-pinterest.svg' alt='pinterest' />
+        </a>
+        <a href='https://instagram.com' target='_blank'>
+          <img src='/assets/shared/icon-instagram.svg' alt='instagram' />
+        </a>
+      </div>
+    </section>
+  </div>
+</footer>
