@@ -1,0 +1,43 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import DesignCard from '@/components/DesignCard.astro';
+---
+
+<MainLayout>
+  <div
+    class='flex flex-col items-center gap-6 bg-peach-600 text-white px-6 py-24 bg-[url("/assets/mobile/bg-pattern-design-pages-intro-mobile.svg")] bg-right-top bg-no-repeat'
+  >
+    <h1>App Design</h1>
+    <p class='text-[0.9375rem] text-center'>
+      Our mobile designs bring intuitive digital solutions to your customers
+      right at their fingertips.
+    </p>
+  </div>
+  <div class='px-6 mt-24 space-y-10'>
+    <DesignCard
+      image='/assets/shared/app-design/image-airfilter.jpg'
+      title='Airfilter'
+      description='Solving the problem of poor indoor air quality by filtering the air'
+    />
+    <DesignCard
+      image='/assets/shared/app-design/image-eyecam.jpg'
+      title='Eyecam'
+      description='Product that lets you edit your favorite photos and videos at any time'
+    />
+    <DesignCard
+      image='/assets/shared/app-design/image-faceit.jpg'
+      title='Faceit'
+      description='Get to meet your favorite internet superstar with the faceit app'
+    />
+    <DesignCard
+      image='/assets/shared/app-design/image-todo.jpg'
+      title='Todo'
+      description='A todo app that features cloud sync with light and dark mode'
+    />
+    <DesignCard
+      image='/assets/shared/app-design/image-loopstudios.jpg'
+      title='Loopstudios'
+      description='A VR experience app made for Loopstudios'
+    />
+  </div>
+</MainLayout>
