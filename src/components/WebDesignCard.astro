@@ -1,0 +1,19 @@
+---
+export interface Props {
+  image: string;
+  title: string;
+  description: string;
+}
+
+const { image, title, description } = Astro.props as Props;
+---
+
+<div class='overflow-hidden rounded-2xl'>
+  <div class='w-full h-80'>
+    <img src={image} alt={title} class='w-full h-full' />
+  </div>
+  <div class='flex flex-col items-center gap-4 p-8 px-8 bg-peach-100'>
+    <h1 class='text-peach-600'>{title}</h1>
+    <p class='text-center'>{description}</p>
+  </div>
+</div>
