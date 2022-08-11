@@ -1,0 +1,24 @@
+---
+export interface Props {
+  image: string;
+  title: string;
+  descriptionTop: string;
+  descriptionBottom: string;
+}
+
+const { image, title, descriptionTop, descriptionBottom } =
+  Astro.props as Props;
+---
+
+<div>
+  <img src={image} alt={title} />
+</div>
+<div
+  class='flex flex-col items-center gap-6 px-6 py-20 bg-peach-100 bg-[url("/assets/shared/bg-pattern-three-circles.svg")] text-center'
+>
+  <h1 class='text-peach-600'>{title}</h1>
+  <div class='text-[0.9375rem] space-y-6'>
+    <p>{descriptionTop}</p>
+    <p>{descriptionBottom}</p>
+  </div>
+</div>
