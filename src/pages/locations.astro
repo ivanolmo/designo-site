@@ -1,0 +1,11 @@
+---
+import MainLayout from '@layouts/MainLayout.astro';
+import Tile from '@components/Tile.astro';
+import { locationData } from '@data/locationData';
+---
+
+<MainLayout>
+  <section class='space-y-10'>
+    {locationData.map((location) => <Tile locationData={location} />)}
+  </section>
+</MainLayout>
