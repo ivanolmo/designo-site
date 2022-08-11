@@ -1,0 +1,24 @@
+---
+export interface Props {
+  buttonText: string;
+  buttonBgColor: string;
+  buttonTextColor: string;
+  buttonHref: string;
+  buttonType?: 'button' | 'submit';
+}
+
+const {
+  buttonText,
+  buttonBgColor,
+  buttonTextColor,
+  buttonHref,
+  buttonType = 'button',
+} = Astro.props as Props;
+---
+
+<button
+  type={buttonType || 'button'}
+  class={`px-6 py-4 mt-3 rounded-lg w-fit ${buttonBgColor} ${buttonTextColor}`}
+>
+  <a href={buttonHref} class='font-medium uppercase'>{buttonText}</a>
+</button>
