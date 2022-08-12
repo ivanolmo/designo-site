@@ -1,24 +1,60 @@
 ---
 export interface Props {
-  image: string;
-  title: string;
-  descriptionTop: string;
-  descriptionBottom: string;
+  aboutData?: {
+    name: string;
+    description: {
+      top: string;
+      bottom: string;
+    };
+    tileImage: {
+      mobile: string;
+      tablet: string;
+      desktop: string;
+    };
+  };
+  locationData?: {
+    id: string;
+    name: string;
+    address: {
+      name: string;
+      street: string;
+      city: string;
+    };
+    contact: {
+      name: string;
+      phone: string;
+      email: string;
+    };
+    tileImage: {
+      mobile: string;
+      tablet: string;
+      desktop: string;
+    };
+  };
 }
 
-const { image, title, descriptionTop, descriptionBottom } =
-  Astro.props as Props;
+import Details from "@components/Details.astro";
+
+const {aboutData, locationData} = Astro.props as Props;
 ---
 
-<div>
-  <img src={image} alt={title} />
-</div>
-<div
-  class='flex flex-col items-center gap-6 px-6 py-20 bg-peach-100 bg-[url("/assets/shared/bg-pattern-three-circles.svg")] text-center'
->
-  <h1 class='text-peach-600'>{title}</h1>
-  <div class='text-[0.9375rem] space-y-6'>
-    <p>{descriptionTop}</p>
-    <p>{descriptionBottom}</p>
+<div id={locationData?.id ?? null}>
+  <div>
+    <img src={locationData?.tileImage.mobile ?? aboutData?.tileImage.mobile} alt={locationData?.name ?? aboutData?.name} />
+  </div>
+  <div
+    class='flex flex-col items-center gap-6 px-6 py-20 bg-peach-100 bg-[url("/assets/shared/bg-pattern-three-circles.svg")] text-center'
+  >
+    <h1 class='text-peach-600'>{locationData?.name ?? aboutData?.name}</h1>
+    <div class='text-[0.9375rem] space-y-6'>
+      {!locationData && (
+        <p>{aboutData?.description.top}</p>
+        <p>{aboutData?.description.bottom}</p>
+      )}
+      {locationData && (
+        <Details dark={true} rowOne={locationData?.address.name} rowTwo={locationData?.address.street} rowThree={locationData?.address.city} />
+        <Details dark={true} rowOne={locationData?.contact.name} rowTwo={locationData?.contact.phone} rowThree={locationData?.contact.email} />
+      )}
+    </div>
   </div>
 </div>
