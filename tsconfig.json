@@ -15,9 +15,15 @@
     "strict": true,
     // Error when a value import is only used as a type.
     "importsNotUsedAsValues": "error",
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@components/*": ["src/components/*"],
+      "@data/*": ["src/data/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@style/*": ["src/style/*"]
+    },
+    "jsx": "react-jsx",
+    "include": ["./src/**/*"],
+    "exclude": ["node_modules"]
   }
 }
