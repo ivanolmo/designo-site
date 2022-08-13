@@ -1,6 +1,7 @@
 ---
 import MainLayout from '@layouts/MainLayout.astro';
 import DesignCard from '@components/DesignCard.astro';
+import ProjectCard from '@components/ProjectCard.astro';
 ---
 
 <MainLayout>
@@ -13,7 +14,7 @@ import DesignCard from '@components/DesignCard.astro';
       memorable brand experiences.
     </p>
   </div>
-  <div class='px-6 mt-24 space-y-10'>
+  <section class='px-6 mt-24 space-y-10'>
     <DesignCard
       image='/assets/shared/web-design/image-express.jpg'
       title='Express'
@@ -44,5 +45,10 @@ import DesignCard from '@components/DesignCard.astro';
       title='Camp'
       description='Get expert training in coding, data, design, and digital marketing'
     />
-  </div>
+  </section>
+  <section class='flex flex-col gap-6 px-6 mt-24'>
+    <ProjectCard title='App Design' link='/app-design' imgSrc='app' />
+    <ProjectCard title='Graphic Design' link='/graphic-design' imgSrc='graphic'
+    />
+  </section>
 </MainLayout>
