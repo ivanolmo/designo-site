@@ -22,7 +22,8 @@ interface Location {
   address: Address;
   contact: Contact;
   tileImage: TileImage;
-  illustration: string;
+  image: string;
+  withButton: boolean;
 }
 
 export const locationData: Location[] = [
@@ -44,7 +45,8 @@ export const locationData: Location[] = [
       tablet: '/assets/tablet/locations/image-map-canada.png',
       desktop: '/assets/shared/locations/image-map-canada.png',
     },
-    illustration: '/assets/shared/illustration-canada.svg',
+    image: '/assets/shared/illustration-canada.svg',
+    withButton: true,
   },
   {
     id: 'aus',
@@ -64,7 +66,8 @@ export const locationData: Location[] = [
       tablet: '/assets/tablet/locations/image-map-australia.png',
       desktop: '/assets/shared/locations/image-map-australia.png',
     },
-    illustration: '/assets/shared/illustration-australia.svg',
+    image: '/assets/shared/illustration-australia.svg',
+    withButton: true,
   },
   {
     id: 'uk',
@@ -84,6 +87,7 @@ export const locationData: Location[] = [
       tablet: '/assets/tablet/locations/image-map-united-kingdom.png',
       desktop: '/assets/shared/locations/image-map-united-kingdom.png',
     },
-    illustration: '/assets/shared/illustration-united-kingdom.svg',
+    image: '/assets/shared/illustration-united-kingdom.svg',
+    withButton: true,
   },
 ];
