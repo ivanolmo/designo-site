@@ -2,7 +2,8 @@
 import MainLayout from '@layouts/MainLayout.astro';
 import ProjectCard from '@components/ProjectCard.astro';
 import BorderlessCard from '@components/BorderlessCard.astro';
-import '@style/global.css';
+import Button from '@components/Button.astro';
+import { valuesData } from '@data/valuesData';
 ---
 
 <MainLayout>
@@ -15,11 +16,12 @@ import '@style/global.css';
       responsive websites, app design, and engaging brand experiences. Find out
       more about our services.
     </p>
-    <div class='px-6 py-4 mt-3 bg-white text-black rounded-lg w-fit'>
-      <a href='/about' class='btn btn-primary uppercase font-medium'
-        >Learn More
-      </a>
-    </div>
+    <Button
+      buttonText='Learn More'
+      buttonBgColor='bg-white'
+      buttonTextColor='text-black'
+      buttonHref='/about'
+    />
     <div class='mt-16 px-6'>
       <img
         src='/assets/mobile/image-hero-phone-mobile.png'
@@ -35,23 +37,6 @@ import '@style/global.css';
     />
   </section>
   <section class='flex flex-col items-center gap-20 px-6 mt-28'>
-    <BorderlessCard
-      image='/assets/shared/illustration-passionate.svg'
-      alt='passionate'
-      title='Passionate'
-      description='Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge art, design, and technology into exciting new solutions.'
-    />
-    <BorderlessCard
-      image='/assets/shared/illustration-resourceful.svg'
-      alt='resourceful'
-      title='Resourceful'
-      description='Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value customer collaboration. It guarantees superior results that fulfill our clients’ needs.'
-    />
-    <BorderlessCard
-      image='/assets/shared/illustration-friendly.svg'
-      alt='friendly'
-      title='Friendly'
-      description='We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.'
-    />
+    {valuesData.map((value) => <BorderlessCard data={value} />)}
   </section>
 </MainLayout>
