@@ -1,5 +1,7 @@
 ---
-import GetInTouchCard from '@/components/GetInTouchCard.astro';
+import GetInTouchCard from '@components/GetInTouchCard.astro';
+import Details from './Details.astro';
+import { locationData } from '@data/locationData';
 ---
 
 <footer>
@@ -22,16 +24,18 @@ import GetInTouchCard from '@/components/GetInTouchCard.astro';
         <h4><a href='/locations'>Locations</a></h4>
         <h4><a href='/contact'>Contact</a></h4>
       </div>
-      <div class='flex flex-col items-center gap-2 text-base text-gray-200'>
-        <p><span class='font-bold'>Designo Central Office</span></p>
-        <p><span>3886 Wellington Street</span></p>
-        <p><span>Toronto, Ontario M9C 3J5</span></p>
-      </div>
-      <div class='flex flex-col items-center gap-2 text-base text-gray-200'>
-        <p><span class='font-bold'>Contact Us (Central Office)</span></p>
-        <p><span>P: +1 253-863-8967</span></p>
-        <p><span>M : contact@designo.co</span></p>
-      </div>
+      <Details
+        dark={false}
+        rowOne={locationData[0]?.address.name}
+        rowTwo={locationData[0]?.address.street}
+        rowThree={locationData[0]?.address.city}
+      />
+      <Details
+        dark={false}
+        rowOne='Contact Us (Central Office)'
+        rowTwo={locationData[0]?.contact.phone}
+        rowThree={locationData[0]?.contact.email}
+      />
       <div class='flex items-center justify-center gap-4'>
         <a href='https://facebook.com' target='_blank'>
           <img src='/assets/shared/icon-facebook.svg' alt='facebook' />
