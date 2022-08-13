@@ -1,6 +1,7 @@
 ---
 import MainLayout from '@layouts/MainLayout.astro';
 import DesignCard from '@components/DesignCard.astro';
+import ProjectCard from '@components/ProjectCard.astro';
 ---
 
 <MainLayout>
@@ -13,7 +14,7 @@ import DesignCard from '@components/DesignCard.astro';
       right at their fingertips.
     </p>
   </div>
-  <div class='px-6 mt-24 space-y-10'>
+  <section class='px-6 mt-24 space-y-10'>
     <DesignCard
       image='/assets/shared/app-design/image-airfilter.jpg'
       title='Airfilter'
@@ -39,5 +40,10 @@ import DesignCard from '@components/DesignCard.astro';
       title='Loopstudios'
       description='A VR experience app made for Loopstudios'
     />
-  </div>
+  </section>
+  <section class='flex flex-col gap-6 px-6 mt-24'>
+    <ProjectCard title='Web Design' link='/web-design' imgSrc='web' />
+    <ProjectCard title='Graphic Design' link='/graphic-design' imgSrc='graphic'
+    />
+  </section>
 </MainLayout>
