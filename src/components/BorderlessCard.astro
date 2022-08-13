@@ -1,33 +1,39 @@
 ---
 export interface Props {
-  image: string;
-  alt: string;
-  title: string;
-  description?: string;
-  button?: boolean;
-  buttonProps: {
-    buttonText: string;
-    buttonBgColor: string;
-    buttonTextColor: string;
-    buttonHref: string;
+  data: {
+    name: string;
+    image: string;
+    description?: string;
+    withButton?: boolean;
+    id?: string;
   };
 }
 
 import Button from '@components/Button.astro';
 
-const { image, alt, title, description, button, buttonProps } =
-  Astro.props as Props;
+const {
+  data: { name, image, description, withButton, id },
+} = Astro.props as Props;
 ---
 
 <div class='flex flex-col items-center gap-12'>
   <div
     class='bg-[url("/assets/shared/bg-pattern-small-circle.svg")] bg-no-repeat'
   >
-    <img src={image} alt={alt} />
+    <img src={image} alt={name} />
   </div>
-  <div class='text-center'>
-    <h3 class='font-medium uppercase'>{title}</h3>
+  <div class='flex flex-col items-center gap-8 text-center'>
+    <h3 class='font-medium uppercase'>{name}</h3>
     {description && <p>{description}</p>}
-    {button && <Button {...buttonProps} />}
+    {
+      withButton && (
+        <Button
+          buttonText='See Location'
+          buttonBgColor='bg-peach-600'
+          buttonTextColor='text-white'
+          buttonHref={`/locations/#${id}`}
+        />
+      )
+    }
   </div>
 </div>
