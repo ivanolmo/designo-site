@@ -3,6 +3,7 @@ import MainLayout from '@layouts/MainLayout.astro';
 import Tile from '@components/Tile.astro';
 import BorderlessCard from '@components/BorderlessCard.astro';
 import { aboutData } from '@data/aboutData';
+import { locationData } from '@data/locationData';
 ---
 
 <MainLayout>
@@ -25,42 +26,7 @@ import { aboutData } from '@data/aboutData';
   </div>
   <Tile aboutData={aboutData[0]} />
   <section class='flex flex-col gap-12 mt-28'>
-    <BorderlessCard
-      image='/assets/shared/illustration-canada.svg'
-      alt='Toronto Skyline'
-      title='Canada'
-      button={true}
-      buttonProps={{
-        buttonText: 'See Locations',
-        buttonBgColor: 'bg-peach-600',
-        buttonTextColor: 'text-white',
-        buttonHref: '/locations/#can',
-      }}
-    />
-    <BorderlessCard
-      image='/assets/shared/illustration-australia.svg'
-      alt='Sydney Opera House'
-      title='Australia'
-      button={true}
-      buttonProps={{
-        buttonText: 'See Locations',
-        buttonBgColor: 'bg-peach-600',
-        buttonTextColor: 'text-white',
-        buttonHref: '/locations/#aus',
-      }}
-    />
-    <BorderlessCard
-      image='/assets/shared/illustration-united-kingdom.svg'
-      alt='London Bridge'
-      title='United Kingdom'
-      button={true}
-      buttonProps={{
-        buttonText: 'See Locations',
-        buttonBgColor: 'bg-peach-600',
-        buttonTextColor: 'text-white',
-        buttonHref: '/locations/#uk',
-      }}
-    />
+    {locationData.map((location) => <BorderlessCard data={location} />)}
   </section>
   <div class='mt-28'>
     <Tile aboutData={aboutData[1]} />
