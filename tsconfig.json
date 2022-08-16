@@ -22,8 +22,6 @@
       "@layouts/*": ["src/layouts/*"],
       "@style/*": ["src/style/*"]
     },
-    "jsx": "react-jsx",
-    "include": ["./src/**/*"],
-    "exclude": ["node_modules"]
+    "jsx": "react-jsx"
   }
 }

@@ -5,7 +5,11 @@ import { locationData } from '@data/locationData';
 ---
 
 <footer>
-  <div class='px-6 py-16 bg-black mt-80'>
+  <div
+    class={`px-6 py-16 bg-black ${
+      Astro.url.pathname === '/contact' ? 'mt-28' : 'mt-80'
+    }`}
+  >
     {
       Astro.url.pathname !== '/contact' && (
         <div class='-mt-64'>

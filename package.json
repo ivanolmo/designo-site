@@ -4,14 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
+    "start": "astro start",
+    "build": "astro check && tsc --noEmit && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^1.0.0",
-    "astro": "^1.0.5",
+    "astro": "^1.0.6",
+    "prettier": "^2.7.1",
     "prettier-plugin-astro": "^0.5.0"
   }
 }
