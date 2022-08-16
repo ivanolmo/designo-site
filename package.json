@@ -10,8 +10,12 @@
     "astro": "astro"
   },
   "devDependencies": {
+    "@astrojs/preact": "^1.0.2",
     "@astrojs/tailwind": "^1.0.0",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
     "astro": "^1.0.6",
+    "preact": "^10.10.6",
     "prettier": "^2.7.1",
     "prettier-plugin-astro": "^0.5.0"
   }
