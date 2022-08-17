@@ -1,12 +1,12 @@
 ---
 import MainLayout from '@layouts/MainLayout.astro';
 import BorderlessCard from '@components/BorderlessCard.astro';
-import ContactForm from '@components/ContactForm.astro';
+import ContactForm from '@components/ContactForm';
 import { locationData } from '@data/locationData';
 ---
 
 <MainLayout>
-  <ContactForm />
+  <ContactForm client:load />
   <section class='mt-28 space-y-10'>
     {locationData.map((location) => <BorderlessCard data={location} />)}
   </section>
