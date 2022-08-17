@@ -18,5 +18,13 @@
     "preact": "^10.10.6",
     "prettier": "^2.7.1",
     "prettier-plugin-astro": "^0.5.0"
+  },
+  "overrides": {
+    "react": "npm:@preact/compat@latest",
+    "react-dom": "npm:@preact/compat@latest"
+  },
+  "dependencies": {
+    "formik": "^2.2.9",
+    "yup": "^0.32.11"
   }
 }
