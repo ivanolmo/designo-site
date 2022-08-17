@@ -2,7 +2,7 @@ import 'preact';
 import { Formik, Form, useField } from 'formik';
 import { number, object, string, SchemaOf } from 'yup';
 
-import { classNames } from '../utils';
+import { classNames } from '../../utils';
 
 interface Values {
   name: string;
