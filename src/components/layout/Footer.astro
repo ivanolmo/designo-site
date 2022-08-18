@@ -7,12 +7,12 @@ import { locationData } from '@data/locationData';
 <footer>
   <div
     class={`px-6 md:px-10 py-16 bg-black ${
-      Astro.url.pathname === '/contact' ? 'mt-28' : 'mt-80'
+      Astro.url.pathname === '/contact' ? 'mt-28' : 'mt-80 md:mt-96'
     }`}
   >
     {
       Astro.url.pathname !== '/contact' && (
-        <div class='-mt-64'>
+        <div class='-mt-64 md:-mt-80'>
           <GetInTouchCard />
         </div>
       )
