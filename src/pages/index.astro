@@ -2,13 +2,12 @@
 import MainLayout from '@layouts/MainLayout.astro';
 import BorderlessCard from '@components/ui/BorderlessCard.astro';
 import Button from '@components/ui/Button.astro';
-import ProjectCard from '@components/ui/ProjectCard.astro';
 import { valuesData } from '@data/valuesData';
 ---
 
 <MainLayout>
   <section
-    class='flex flex-col items-center gap-3.5 bg-peach-600 px-6 pt-20 text-white text-center bg-[url("/assets/shared/bg-pattern-hero-home.svg")] bg-[top_100px_left] bg-no-repeat overflow-hidden'
+    class='flex flex-col items-center gap-3.5 bg-peach-600 px-6 md:px-24 pt-20 text-white text-center bg-[url("/assets/shared/bg-pattern-hero-home.svg")] bg-[top_100px_left] md:bg-[top_100px_right] bg-no-repeat overflow-hidden md:rounded-2xl'
   >
     <h1>Award-winning custom designs and digital branding solutions</h1>
     <p>
@@ -24,17 +23,57 @@ import { valuesData } from '@data/valuesData';
     />
     <div class='mt-16 px-6'>
       <img
-        src='/assets/mobile/image-hero-phone-mobile.png'
+        src='/assets/mobile/home/image-hero-phone-mobile.png'
         alt='phone image'
-        class='hero-img drop-shadow-hero-mobile'
+        class='hero-img drop-shadow-hero-mobile md:hidden'
+      />
+      <img
+        src='/assets/desktop/home/image-hero-phone.png'
+        alt='phone image'
+        class='hidden md:block -mt-40 -mb-80 max-w-none'
       />
     </div>
   </section>
-  <section class='flex flex-col gap-6 px-6 mt-28'>
-    <ProjectCard title='Web Design' link='/web-design' imgSrc='web' />
-    <ProjectCard title='App Design' link='/app-design' imgSrc='app' />
-    <ProjectCard title='Graphic Design' link='/graphic-design' imgSrc='graphic'
-    />
+  <section class='grid grid-cols-1 gap-6 px-6 md:px-0 mt-28'>
+    <div>
+      <a href='/web-design'>
+        <div
+          class='flex flex-col items-center gap-3 uppercase text-white py-24 rounded-2xl bg-no-repeat bg-cover bg-center bg-[url("/assets/mobile/home/image-web-design.jpg")] md:bg-[url("/assets/tablet/home/image-web-design.jpg")] lg:bg-[url("/assets/desktop/home/image-web-design-large.jpg")] bg-blend-overlay bg-gray-800'
+        >
+          <h2>Web Design</h2>
+          <div class='flex items-center gap-5 text-[0.9375rem] tracking-[5px]'>
+            <span>View Projects</span>
+            <img src='/assets/shared/icon-right-arrow.svg' alt='right arrow' />
+          </div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href='/app-design'>
+        <div
+          class='flex flex-col items-center gap-3 uppercase text-white py-24 rounded-2xl bg-[url("/assets/mobile/home/image-app-design.jpg")] bg-no-repeat bg-cover bg-center md:bg-[url("/assets/tablet/home/image-app-design.jpg")] lg:bg-[url("/assets/desktop/home/image-app-design.jpg")] bg-blend-overlay bg-gray-800'
+        >
+          <h2>App Design</h2>
+          <div class='flex items-center gap-5 text-[0.9375rem] tracking-[5px]'>
+            <span>View Projects</span>
+            <img src='/assets/shared/icon-right-arrow.svg' alt='right arrow' />
+          </div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href='/graphic-design'>
+        <div
+          class='flex flex-col items-center gap-3 uppercase text-white py-24 rounded-2xl bg-no-repeat bg-cover bg-center bg-[url("/assets/mobile/home/image-graphic-design.jpg")] md:bg-[url("/assets/tablet/home/image-graphic-design.jpg")] lg:bg-[url("/assets/desktop/home/image-graphic-design.jpg")] bg-blend-overlay bg-gray-800'
+        >
+          <h2>Graphic Design</h2>
+          <div class='flex items-center gap-5 text-[0.9375rem] tracking-[5px]'>
+            <span>View Projects</span>
+            <img src='/assets/shared/icon-right-arrow.svg' alt='right arrow' />
+          </div>
+        </div>
+      </a>
+    </div>
   </section>
   <section class='flex flex-col items-center gap-20 px-6 mt-28'>
     {valuesData.map((value) => <BorderlessCard data={value} />)}
