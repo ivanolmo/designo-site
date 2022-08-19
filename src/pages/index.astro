@@ -9,19 +9,21 @@ import { valuesData } from '@data/valuesData';
   <section
     class='flex flex-col items-center gap-3.5 bg-peach-600 px-6 md:px-24 pt-20 text-white text-center bg-[url("/assets/shared/bg-pattern-hero-home.svg")] bg-[top_100px_left] md:bg-[top_100px_right] bg-no-repeat overflow-hidden md:rounded-2xl'
   >
-    <h1>Award-winning custom designs and digital branding solutions</h1>
-    <p>
-      With over 10 years in the industry, we are experienced in creating fully
-      responsive websites, app design, and engaging brand experiences. Find out
-      more about our services.
-    </p>
-    <Button
-      buttonText='Learn More'
-      buttonBgColor='bg-white'
-      buttonTextColor='text-black'
-      buttonHref='/about'
-    />
-    <div class='mt-16 px-6'>
+    <div class='flex flex-col items-center gap-6'>
+      <h1>Award-winning custom designs and digital branding solutions</h1>
+      <p>
+        With over 10 years in the industry, we are experienced in creating fully
+        responsive websites, app design, and engaging brand experiences. Find
+        out more about our services.
+      </p>
+      <Button
+        buttonText='Learn More'
+        buttonBgColor='bg-white'
+        buttonTextColor='text-black'
+        buttonHref='/about'
+      />
+    </div>
+    <div class='mt-16 px-6 pointer-events-none'>
       <img
         src='/assets/mobile/home/image-hero-phone-mobile.png'
         alt='phone image'
@@ -75,7 +77,7 @@ import { valuesData } from '@data/valuesData';
       </a>
     </div>
   </section>
-  <section class='flex flex-col items-center gap-20 px-6 mt-28'>
+  <section class='flex flex-col items-center gap-20 px-6 md:px-0 mt-28'>
     {valuesData.map((value) => <BorderlessCard data={value} />)}
   </section>
 </MainLayout>
