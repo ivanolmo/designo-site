@@ -16,13 +16,19 @@ const {
 } = Astro.props as Props;
 ---
 
-<div class='flex flex-col items-center gap-12'>
+<div
+  class={`flex flex-col items-center gap-12 ${!withButton && 'md:flex-row'}`}
+>
   <div
-    class='bg-[url("/assets/shared/bg-pattern-small-circle.svg")] bg-no-repeat'
+    class='bg-[url("/assets/shared/bg-pattern-small-circle.svg")] bg-no-repeat bg-center bg-cover md:w-full md:max-w-[12.625rem]'
   >
     <img src={image} alt={name} />
   </div>
-  <div class='flex flex-col items-center gap-8 text-center'>
+  <div
+    class={`flex flex-col items-center gap-8 text-center ${
+      !withButton && 'md:items-start md:text-start'
+    }`}
+  >
     <h3 class='font-medium uppercase'>{name}</h3>
     {description && <p>{description}</p>}
     {
