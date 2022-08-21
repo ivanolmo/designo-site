@@ -15,12 +15,17 @@
     "strict": true,
     // Error when a value import is only used as a type.
     "importsNotUsedAsValues": "error",
+    "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
       "@data/*": ["src/data/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@style/*": ["src/style/*"]
+      "@style/*": ["src/style/*"],
+      "@astrojs": ["node_modules/@astrojs/"],
+      "react": ["node_modules/preact/compat/"],
+      "react-dom": ["node_modules/preact/compat/"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
