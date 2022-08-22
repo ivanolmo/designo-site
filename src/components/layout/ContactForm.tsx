@@ -55,7 +55,7 @@ function Input(props: InputProps) {
         )}
 
         {meta.touched && meta.error && (
-          <div className='absolute right-8 mt-2.5 flex items-center gap-2 text-white text-xs italic error-icon'>
+          <div className='absolute right-8 md:right-32 mt-2.5 md:mt-4 flex items-center gap-2 text-white text-xs italic error-icon'>
             <span>{meta.error}</span>
           </div>
         )}
@@ -87,13 +87,13 @@ export default function ContactForm() {
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
-          onSubmit={(values, { resetForm }) => {
+          onSubmit={(values: Values, { resetForm }) => {
             alert(JSON.stringify(values, null, 2));
             resetForm();
           }}
         >
-          {() => {
-            return (
+          {() => (
+            <>
               <Form>
                 <div className='flex flex-col items-center gap-6'>
                   <Input inputType='input' name='name' placeholder='Name' />
@@ -113,8 +113,8 @@ export default function ContactForm() {
                   </button>
                 </div>
               </Form>
-            );
-          }}
+            </>
+          )}
         </Formik>
       </div>
     </div>
