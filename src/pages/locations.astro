@@ -5,7 +5,11 @@ import { locationData } from '@data/locationData';
 ---
 
 <MainLayout>
-  <section class='space-y-10 md:space-y-28'>
-    {locationData.map((location) => <LocationTile locationData={location} />)}
+  <section class='space-y-10 md:space-y-28 lg:space-y-8'>
+    {
+      locationData.map((location, index) => (
+        <LocationTile locationData={location} index={index} />
+      ))
+    }
   </section>
 </MainLayout>
