@@ -18,7 +18,7 @@ const {
 
 <button
   type={buttonType || 'button'}
-  class={`py-4 rounded-lg w-[152px] ${buttonBgColor} ${buttonTextColor}`}
+  class={`py-4 rounded-lg w-[152px] ${buttonBgColor} hover:bg-peach-400 ${buttonTextColor} hover:text-white transition-colors duration-300`}
 >
   <a href={buttonHref} class='font-medium uppercase'>{buttonText}</a>
 </button>
