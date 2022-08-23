@@ -76,7 +76,7 @@ export default function ContactForm() {
     <div className='flex flex-col lg:flex-row items-center px-6 md:px-16 lg:px-24 py-[4.5rem] lg:py-14 bg-peach-600 bg-[url("/assets/mobile/contact/bg-pattern-hero-contact-mobile.svg")] md:bg-[url("/assets/shared/contact/bg-pattern-hero-contact.svg")] md:bg-no-repeat md:bg-[left_-120px_top] lg:bg-left md:rounded-2xl'>
       <div className='flex flex-col items-center gap-6 text-white lg:gap-8 md:items-start lg:w-1/2 lg:pr-4'>
         <h1>Contact Us</h1>
-        <p className='text-[0.9375rem] md:text-base text-center md:text-start'>
+        <p className='text-center md:text-base md:text-start'>
           Ready to take it to the next level? Let’s talk about your project or
           idea and find out how we can help your business grow. If you are
           looking for unique digital experiences that’s relatable to your users,

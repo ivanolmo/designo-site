@@ -6,16 +6,16 @@ import ProjectCard from '@components/ui/ProjectCard.astro';
 
 <MainLayout>
   <div
-    class='flex flex-col items-center gap-6 bg-peach-600 text-white px-6 md:px-40 lg:px-80 py-24 md:py-16 bg-[url("/assets/mobile/shared/bg-pattern-design-pages-intro-mobile.svg")] md:bg-[url("/assets/shared/bg-pattern-design-pages-intro.svg")] bg-right-top md:bg-center bg-no-repeat md:rounded-2xl'
+    class='flex flex-col items-center gap-6 bg-peach-600 text-white px-6 md:px-40 py-24 md:py-16 bg-[url("/assets/mobile/shared/bg-pattern-design-pages-intro-mobile.svg")] md:bg-[url("/assets/shared/bg-pattern-design-pages-intro.svg")] bg-right-top md:bg-center bg-no-repeat md:rounded-2xl'
   >
     <h1>Web Design</h1>
-    <p class='text-[0.9375rem] text-center'>
+    <p class='text-center'>
       We build websites that serve as powerful marketing tools and bring
       memorable brand experiences.
     </p>
   </div>
   <section
-    class='px-6 md:px-0 mt-24 space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8'
+    class='px-6 mt-24 space-y-10 md:px-0 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8'
   >
     <DesignCard
       image='/assets/shared/web-design/image-express.jpg'
@@ -48,16 +48,16 @@ import ProjectCard from '@components/ui/ProjectCard.astro';
       description='Get expert training in coding, data, design, and digital marketing'
     />
   </section>
-  <section class='flex flex-col lg:flex-row gap-6 px-6 md:px-0 mt-24'>
-    <div class='relative group w-full'>
+  <section class='flex flex-col gap-6 px-6 mt-24 lg:flex-row md:px-0'>
+    <div class='relative w-full group'>
       <a href='/app-design'>
         <div
           class='grid grid-cols-1 place-items-center gap-y-4 uppercase text-white py-24 rounded-2xl bg-no-repeat bg-cover bg-center bg-[url("/assets/mobile/home/image-app-design.jpg")] md:bg-[url("/assets/tablet/home/image-app-design.jpg")] lg:bg-[url("/assets/desktop/home/image-app-design.jpg")]'
         >
-          <div class='flex flex-col items-center gap-4 z-10'>
+          <div class='z-10 flex flex-col items-center gap-4'>
             <h2>App Design</h2>
             <div
-              class='flex items-center gap-5 text-[0.9375rem] tracking-[5px]'
+              class='flex items-center gap-5 text-sm md:text-base tracking-[5px]'
             >
               <span>View Projects</span>
               <img src='/assets/shared/icon-right-arrow.svg' alt='right arrow'
@@ -66,20 +66,20 @@ import ProjectCard from '@components/ui/ProjectCard.astro';
           </div>
         </div>
         <div
-          class='absolute inset-0 rounded-2xl bg-gray-800 opacity-70 group-hover:bg-peach-600 transition-colors duration-300'
+          class='absolute inset-0 transition-colors duration-300 bg-gray-800 rounded-2xl opacity-70 group-hover:bg-peach-600'
         >
         </div>
       </a>
     </div>
-    <div class='relative group w-full'>
+    <div class='relative w-full group'>
       <a href='/graphic-design'>
         <div
           class='grid grid-cols-1 place-items-center gap-y-4 uppercase text-white py-24 rounded-2xl bg-no-repeat bg-cover bg-center bg-[url("/assets/mobile/home/image-graphic-design.jpg")] md:bg-[url("/assets/tablet/home/image-graphic-design.jpg")] lg:bg-[url("/assets/desktop/home/image-graphic-design.jpg")]'
         >
-          <div class='flex flex-col items-center gap-4 z-10'>
+          <div class='z-10 flex flex-col items-center gap-4'>
             <h2>Graphic Design</h2>
             <div
-              class='flex items-center gap-5 text-[0.9375rem] tracking-[5px]'
+              class='flex items-center gap-5 text-sm md:text-base tracking-[5px]'
             >
               <span>View Projects</span>
               <img src='/assets/shared/icon-right-arrow.svg' alt='right arrow'
@@ -88,7 +88,7 @@ import ProjectCard from '@components/ui/ProjectCard.astro';
           </div>
         </div>
         <div
-          class='absolute inset-0 rounded-2xl bg-gray-800 opacity-70 group-hover:bg-peach-600 transition-colors duration-300'
+          class='absolute inset-0 transition-colors duration-300 bg-gray-800 rounded-2xl opacity-70 group-hover:bg-peach-600'
         >
         </div>
       </a>
