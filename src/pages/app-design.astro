@@ -6,7 +6,7 @@ import ProjectCard from '@components/ui/ProjectCard.astro';
 
 <MainLayout>
   <div
-    class='flex flex-col items-center gap-6 bg-peach-600 text-white px-6 md:px-40 py-24 bg-[url("/assets/mobile/bg-pattern-design-pages-intro-mobile.svg")] md:bg-[url("/assets/shared/bg-pattern-design-pages-intro.svg")] bg-right-top md:bg-center bg-no-repeat md:rounded-2xl'
+    class='flex flex-col items-center gap-6 bg-peach-600 text-white px-6 md:px-40 lg:px-80 py-24 bg-[url("/assets/mobile/bg-pattern-design-pages-intro-mobile.svg")] md:bg-[url("/assets/shared/bg-pattern-design-pages-intro.svg")] bg-right-top md:bg-center bg-no-repeat md:rounded-2xl'
   >
     <h1>App Design</h1>
     <p class='text-[0.9375rem] text-center'>
@@ -14,7 +14,9 @@ import ProjectCard from '@components/ui/ProjectCard.astro';
       right at their fingertips.
     </p>
   </div>
-  <section class='px-6 md:px-0 mt-24 space-y-10'>
+  <section
+    class='px-6 md:px-0 mt-24 space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8'
+  >
     <DesignCard
       image='/assets/shared/app-design/image-airfilter.jpg'
       title='Airfilter'
@@ -41,30 +43,48 @@ import ProjectCard from '@components/ui/ProjectCard.astro';
       description='A VR experience app made for Loopstudios'
     />
   </section>
-  <section class='flex flex-col gap-6 px-6 md:px-0 mt-24'>
-    <div>
+  <section class='flex flex-col lg:flex-row gap-6 px-6 md:px-0 mt-24'>
+    <div class='relative group w-full'>
       <a href='/web-design'>
         <div
-          class='flex flex-col items-center gap-3 uppercase text-white py-24 rounded-2xl bg-no-repeat bg-cover bg-center bg-[url("/assets/mobile/home/image-web-design.jpg")] md:bg-[url("/assets/tablet/home/image-web-design.jpg")] lg:bg-[url("/assets/desktop/home/image-web-design-large.jpg")] bg-blend-overlay bg-gray-800'
+          class='grid grid-cols-1 place-items-center gap-y-4 uppercase text-white py-24 rounded-2xl bg-no-repeat bg-cover bg-center bg-[url("/assets/mobile/home/image-web-design.jpg")] md:bg-[url("/assets/tablet/home/image-web-design.jpg")] lg:bg-[url("/assets/desktop/home/image-web-design.jpg")]'
         >
-          <h2>Web Design</h2>
-          <div class='flex items-center gap-5 text-[0.9375rem] tracking-[5px]'>
-            <span>View Projects</span>
-            <img src='/assets/shared/icon-right-arrow.svg' alt='right arrow' />
+          <div class='flex flex-col items-center gap-4 z-10'>
+            <h2>Web Design</h2>
+            <div
+              class='flex items-center gap-5 text-[0.9375rem] tracking-[5px]'
+            >
+              <span>View Projects</span>
+              <img src='/assets/shared/icon-right-arrow.svg' alt='right arrow'
+              />
+            </div>
           </div>
+        </div>
+        <div
+          class='absolute inset-0 rounded-2xl bg-gray-800 opacity-70 group-hover:bg-peach-600 transition-colors duration-300'
+        >
         </div>
       </a>
     </div>
-    <div>
+    <div class='relative group w-full'>
       <a href='/graphic-design'>
         <div
-          class='flex flex-col items-center gap-3 uppercase text-white py-24 rounded-2xl bg-no-repeat bg-cover bg-center bg-[url("/assets/mobile/home/image-graphic-design.jpg")] md:bg-[url("/assets/tablet/home/image-graphic-design.jpg")] lg:bg-[url("/assets/desktop/home/image-graphic-design.jpg")] bg-blend-overlay bg-gray-800'
+          class='grid grid-cols-1 place-items-center gap-y-4 uppercase text-white py-24 rounded-2xl bg-no-repeat bg-cover bg-center bg-[url("/assets/mobile/home/image-graphic-design.jpg")] md:bg-[url("/assets/tablet/home/image-graphic-design.jpg")] lg:bg-[url("/assets/desktop/home/image-graphic-design.jpg")]'
         >
-          <h2>Graphic Design</h2>
-          <div class='flex items-center gap-5 text-[0.9375rem] tracking-[5px]'>
-            <span>View Projects</span>
-            <img src='/assets/shared/icon-right-arrow.svg' alt='right arrow' />
+          <div class='flex flex-col items-center gap-4 z-10'>
+            <h2>Graphic Design</h2>
+            <div
+              class='flex items-center gap-5 text-[0.9375rem] tracking-[5px]'
+            >
+              <span>View Projects</span>
+              <img src='/assets/shared/icon-right-arrow.svg' alt='right arrow'
+              />
+            </div>
           </div>
+        </div>
+        <div
+          class='absolute inset-0 rounded-2xl bg-gray-800 opacity-70 group-hover:bg-peach-600 transition-colors duration-300'
+        >
         </div>
       </a>
     </div>
