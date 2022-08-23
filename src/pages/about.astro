@@ -1,6 +1,6 @@
 ---
 import MainLayout from '@layouts/MainLayout.astro';
-import Tile from '@components/ui/Tile.astro';
+import LocationTile from '@components/ui/LocationTile.astro';
 import BorderlessCard from '@components/ui/BorderlessCard.astro';
 import { aboutData } from '@data/aboutData';
 import { locationData } from '@data/locationData';
@@ -8,8 +8,8 @@ import { locationData } from '@data/locationData';
 
 <MainLayout>
   <div class='md:space-y-28'>
-    <div class='md:rounded-2xl md:overflow-hidden'>
-      <div>
+    <div class='md:rounded-2xl md:overflow-hidden lg:flex lg:flex-row-reverse'>
+      <div class='lg:w-5/12'>
         <img
           src='/assets/mobile/about/image-about-hero.jpg'
           alt='meeting'
@@ -27,10 +27,10 @@ import { locationData } from '@data/locationData';
         />
       </div>
       <div
-        class='flex flex-col items-center gap-6 md:gap-8 bg-peach-600 text-white px-6 md:px-20 py-20 md:py-16 bg-[url("/assets/mobile/about/bg-pattern-hero-about-mobile.svg")] md:bg-[url("/assets/shared/about/bg-pattern-hero-about.svg")] bg-[top_-120px_right] md:bg-[top_-360px_right] bg-no-repeat'
+        class='flex flex-col items-center lg:items-start gap-6 md:gap-8 bg-peach-600 text-white px-6 md:px-20 lg:px-24 py-20 md:py-16 lg:py-36 bg-[url("/assets/mobile/about/bg-pattern-hero-about-mobile.svg")] md:bg-[url("/assets/shared/about/bg-pattern-hero-about.svg")] bg-[top_-120px_right] md:bg-[top_-360px_right] lg:bg-bottom bg-no-repeat lg:w-7/12'
       >
         <h1>About Us</h1>
-        <p class='text-[0.9375rem] text-center'>
+        <p class='text-[0.9375rem] text-center lg:text-start'>
           Founded in 2010, we are a creative agency that produces lasting
           results for our clients. We’ve partnered with many startups,
           corporations, and nonprofits alike to craft designs that make real
@@ -39,26 +39,26 @@ import { locationData } from '@data/locationData';
         </p>
       </div>
     </div>
-    <div class='md:rounded-2xl md:overflow-hidden'>
-      <div>
+    <div class='md:rounded-2xl md:overflow-hidden lg:flex'>
+      <div class='lg:w-5/12'>
         <img
           src='/assets/mobile/about/image-world-class-talent.jpg'
           alt='world class talent'
-          class='md:hidden w-full'
+          class='md:hidden'
         />
         <img
           src='/assets/tablet/about/image-world-class-talent.jpg'
           alt='world class talent'
-          class='hidden md:block lg:hidden w-full'
+          class='hidden md:block lg:hidden'
         />
         <img
           src='/assets/desktop/about/image-world-class-talent.jpg'
           alt='world class talent'
-          class='hidden lg:block w-full'
+          class='hidden lg:block'
         />
       </div>
       <div
-        class='flex flex-col items-center gap-6 px-6 md:px-20 py-20 md:py-16 bg-peach-100 bg-[url("/assets/shared/bg-pattern-three-circles.svg")] text-center'
+        class='flex flex-col items-center lg:items-start gap-6 px-6 md:px-20 lg:px-24 py-20 md:py-16 lg:py-36 bg-peach-100 bg-[url("/assets/shared/bg-pattern-three-circles.svg")] lg:bg-bottom text-center lg:text-start lg:w-7/12'
       >
         <h1 class='text-peach-600'>World-class talent</h1>
         <div class='text-[0.9375rem] space-y-6'>
@@ -78,32 +78,38 @@ import { locationData } from '@data/locationData';
         </div>
       </div>
     </div>
-    <section class='flex flex-col gap-12 mt-28 md:m-0'>
+    <section
+      class='flex flex-col gap-12 lg:flex-row lg:justify-evenly mt-28 md:m-0'
+    >
       {locationData.map((location) => <BorderlessCard data={location} />)}
     </section>
-    <div class='md:rounded-2xl md:overflow-hidden mt-28 md:m-0'>
-      <div>
+    <div
+      class='md:rounded-2xl md:overflow-hidden mt-28 md:m-0 lg:flex lg:flex-row-reverse'
+    >
+      <div class='lg:w-5/12'>
         <img
           src='/assets/mobile/about/image-real-deal.jpg'
           alt='real deal'
-          class='md:hidden w-full'
+          class='md:hidden'
         />
         <img
           src='/assets/tablet/about/image-real-deal.jpg'
           alt='real deal'
-          class='hidden md:block lg:hidden w-full'
+          class='hidden md:block lg:hidden'
         />
         <img
           src='/assets/desktop/about/image-real-deal.jpg'
           alt='real deal'
-          class='hidden lg:block w-full'
+          class='hidden lg:block'
         />
       </div>
       <div
-        class='flex flex-col items-center gap-6 px-6 md:px-20 py-20 md:py-16 bg-peach-100 bg-[url("/assets/shared/bg-pattern-three-circles.svg")] text-center'
+        class='flex flex-col items-center lg:items-start gap-6 px-6 md:px-20 lg:px-24 py-20 md:py-16 lg:py-36 bg-peach-100 bg-[url("/assets/shared/bg-pattern-three-circles.svg")] lg:bg-bottom text-center lg:text-start lg:w-7/12'
       >
         <h1 class='text-peach-600'>The real deal</h1>
-        <div class='text-[0.9375rem] space-y-6'>
+        <div
+          class='flex flex-col items-center gap-6 text-[0.9375rem] md:text-base'
+        >
           <p>
             As strategic partners in our clients’ businesses, we are ready to
             take on any challenge as our own. Solving real problems require
