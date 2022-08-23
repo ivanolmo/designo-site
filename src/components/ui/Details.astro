@@ -1,9 +1,9 @@
 ---
 export interface Props {
   dark: boolean;
-  rowOne: string;
-  rowTwo: string;
-  rowThree: string;
+  rowOne?: string;
+  rowTwo?: string;
+  rowThree?: string;
 }
 
 const { rowOne, rowTwo, rowThree, dark } = Astro.props as Props;
