@@ -37,7 +37,7 @@ function Input(props: InputProps) {
           <input
             className={classNames(
               meta.touched && !meta.error ? 'border-b-2' : 'border-b',
-              'relative bg-transparent border-white outline-none placeholder-white placeholder-opacity-40 w-full p-2 md:px-6 md:py-4 text-white text-[0.9375rem] font-medium'
+              'relative bg-transparent border-white outline-none placeholder-white placeholder-opacity-40 w-full p-2 md:px-6 md:py-3 text-white text-sm md:text-base font-medium'
             )}
             {...field}
             {...props}
@@ -46,7 +46,7 @@ function Input(props: InputProps) {
           <textarea
             className={classNames(
               meta.touched && !meta.error ? 'border-b-2' : 'border-b',
-              'relative bg-transparent border-white outline-none placeholder-white placeholder-opacity-40 w-full p-2 md:px-6 md:py-4 text-white text-[0.9375rem] font-medium resize-none'
+              'relative bg-transparent border-white outline-none placeholder-white placeholder-opacity-40 w-full p-2 md:px-6 md:py-4 text-white text-sm md:text-base font-medium resize-none'
             )}
             rows={4}
             {...field}

@@ -1,8 +1,6 @@
 ---
 import MainLayout from '@layouts/MainLayout.astro';
-import LocationTile from '@components/ui/LocationTile.astro';
 import BorderlessCard from '@components/ui/BorderlessCard.astro';
-import { aboutData } from '@data/aboutData';
 import { locationData } from '@data/locationData';
 ---
 
@@ -61,7 +59,7 @@ import { locationData } from '@data/locationData';
         class='flex flex-col items-center lg:items-start gap-6 px-6 md:px-20 lg:px-24 py-20 md:py-16 lg:py-36 bg-peach-100 bg-[url("/assets/shared/bg-pattern-three-circles.svg")] lg:bg-bottom text-center lg:text-start lg:w-7/12'
       >
         <h1 class='text-peach-600'>World-class talent</h1>
-        <div class='text-sm md:text-base space-y-6'>
+        <div class='space-y-6 text-sm md:text-base'>
           <p>
             We are a crew of strategists, problem-solvers, and technologists.
             Every design is thoughtfully crafted from concept to launch,
