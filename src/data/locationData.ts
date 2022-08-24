@@ -45,7 +45,7 @@ export const locationData: Location[] = [
       tablet: '/assets/tablet/locations/image-map-canada.png',
       desktop: '/assets/shared/locations/image-map-canada.png',
     },
-    image: '/assets/shared/illustration-canada.svg',
+    image: '/assets/shared/components/illustration-canada.svg',
     withButton: true,
   },
   {
@@ -66,7 +66,7 @@ export const locationData: Location[] = [
       tablet: '/assets/tablet/locations/image-map-australia.png',
       desktop: '/assets/shared/locations/image-map-australia.png',
     },
-    image: '/assets/shared/illustration-australia.svg',
+    image: '/assets/shared/components/illustration-australia.svg',
     withButton: true,
   },
   {
@@ -87,7 +87,7 @@ export const locationData: Location[] = [
       tablet: '/assets/tablet/locations/image-map-united-kingdom.png',
       desktop: '/assets/shared/locations/image-map-united-kingdom.png',
     },
-    image: '/assets/shared/illustration-united-kingdom.svg',
+    image: '/assets/shared/components/illustration-united-kingdom.svg',
     withButton: true,
   },
 ];
