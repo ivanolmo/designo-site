@@ -6,7 +6,7 @@ import { locationData } from '@data/locationData';
 ---
 
 <MainLayout>
-  <ContactForm client:load />
+  <ContactForm client:only='preact' />
   <section class='space-y-10 lg:space-y-0 mt-28 lg:flex lg:justify-evenly'>
     {locationData.map((location) => <BorderlessCard data={location} />)}
   </section>
