@@ -4,15 +4,15 @@
 
 @layer base {
   body {
-    @apply font-sans text-base font-normal leading-[1.66] md:leading-relaxed;
+    @apply font-sans text-base font-normal leading-relaxed;
   }
 
   h1 {
-    @apply text-[2rem] md:text-5xl font-medium leading-none;
+    @apply text-[2rem] md:text-5xl font-medium leading-[1.125] md:leading-none;
   }
 
   h2 {
-    @apply text-[1.75rem] md:text-[2.5rem] font-medium leading-tight tracking-[2px];
+    @apply text-[1.75rem] md:text-[2.5rem] font-medium leading-tight tracking-[2px] md:tracking-normal;
   }
 
   h3 {
@@ -22,4 +22,50 @@
   h4 {
     @apply text-sm leading-none tracking-[2px];
   }
+
+  p {
+    @apply max-w-md text-sm md:text-base;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* right arrow on project card */
+  span + img {
+    width: auto;
+  }
+}
+
+/* disables mobile menu bg screen shadow on larger screens */
+@media screen and (max-width: 767px) {
+  .darken-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    inset: 0;
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+/* contact form error message icon */
+.error-icon::after {
+  content: '!';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 50%;
+  background-color: white;
+  color: #e7816b;
+  text-align: center;
+  font-style: normal;
+}
+
+/* override autofill styling */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
 }
