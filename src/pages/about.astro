@@ -7,28 +7,117 @@ import { locationData } from '@data/locationData';
 ---
 
 <MainLayout>
-  <div>
-    <div>
-      <img src='/assets/mobile/about/image-about-hero.jpg' alt='meeting' />
+  <div class='md:space-y-28'>
+    <div class='md:rounded-2xl md:overflow-hidden'>
+      <div>
+        <img
+          src='/assets/mobile/about/image-about-hero.jpg'
+          alt='meeting'
+          class='md:hidden'
+        />
+        <img
+          src='/assets/tablet/about/image-about-hero.jpg'
+          alt='meeting'
+          class='hidden md:block lg:hidden'
+        />
+        <img
+          src='/assets/desktop/about/image-about-hero.jpg'
+          alt='meeting'
+          class='hidden lg:block'
+        />
+      </div>
+      <div
+        class='flex flex-col items-center gap-6 md:gap-8 bg-peach-600 text-white px-6 md:px-20 py-20 md:py-16 bg-[url("/assets/mobile/about/bg-pattern-hero-about-mobile.svg")] md:bg-[url("/assets/shared/about/bg-pattern-hero-about.svg")] bg-[top_-120px_right] md:bg-[top_-360px_right] bg-no-repeat'
+      >
+        <h1>About Us</h1>
+        <p class='text-[0.9375rem] text-center'>
+          Founded in 2010, we are a creative agency that produces lasting
+          results for our clients. We’ve partnered with many startups,
+          corporations, and nonprofits alike to craft designs that make real
+          impact. We’re always looking forward to creating brands, products, and
+          digital experiences that connect with our clients’ audiences.
+        </p>
+      </div>
     </div>
-    <div
-      class='flex flex-col items-center gap-6 bg-peach-600 text-white px-6 py-20 bg-[url("/assets/mobile/about/bg-pattern-hero-about-mobile.svg")] bg-[top_-120px_right] bg-no-repeat'
-    >
-      <h1>About Us</h1>
-      <p class='text-[0.9375rem] text-center'>
-        Founded in 2010, we are a creative agency that produces lasting results
-        for our clients. We’ve partnered with many startups, corporations, and
-        nonprofits alike to craft designs that make real impact. We’re always
-        looking forward to creating brands, products, and digital experiences
-        that connect with our clients’ audiences.
-      </p>
+    <div class='md:rounded-2xl md:overflow-hidden'>
+      <div>
+        <img
+          src='/assets/mobile/about/image-world-class-talent.jpg'
+          alt='world class talent'
+          class='md:hidden w-full'
+        />
+        <img
+          src='/assets/tablet/about/image-world-class-talent.jpg'
+          alt='world class talent'
+          class='hidden md:block lg:hidden w-full'
+        />
+        <img
+          src='/assets/desktop/about/image-world-class-talent.jpg'
+          alt='world class talent'
+          class='hidden lg:block w-full'
+        />
+      </div>
+      <div
+        class='flex flex-col items-center gap-6 px-6 md:px-20 py-20 md:py-16 bg-peach-100 bg-[url("/assets/shared/bg-pattern-three-circles.svg")] text-center'
+      >
+        <h1 class='text-peach-600'>World-class talent</h1>
+        <div class='text-[0.9375rem] space-y-6'>
+          <p>
+            We are a crew of strategists, problem-solvers, and technologists.
+            Every design is thoughtfully crafted from concept to launch,
+            ensuring success in its given market. We are constantly updating our
+            skills in a myriad of platforms.
+          </p>
+          <p>
+            Our team is multi-disciplinary and we are not merely interested in
+            form — content and meaning are just as important. We give great
+            importance to craftsmanship, service, and prompt delivery. Clients
+            have always been impressed with our high-quality outcomes that
+            encapsulates their brand’s story and mission.
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-  <Tile aboutData={aboutData[0]} />
-  <section class='flex flex-col gap-12 mt-28'>
-    {locationData.map((location) => <BorderlessCard data={location} />)}
-  </section>
-  <div class='mt-28'>
-    <Tile aboutData={aboutData[1]} />
+    <section class='flex flex-col gap-12 mt-28 md:m-0'>
+      {locationData.map((location) => <BorderlessCard data={location} />)}
+    </section>
+    <div class='md:rounded-2xl md:overflow-hidden mt-28 md:m-0'>
+      <div>
+        <img
+          src='/assets/mobile/about/image-real-deal.jpg'
+          alt='real deal'
+          class='md:hidden w-full'
+        />
+        <img
+          src='/assets/tablet/about/image-real-deal.jpg'
+          alt='real deal'
+          class='hidden md:block lg:hidden w-full'
+        />
+        <img
+          src='/assets/desktop/about/image-real-deal.jpg'
+          alt='real deal'
+          class='hidden lg:block w-full'
+        />
+      </div>
+      <div
+        class='flex flex-col items-center gap-6 px-6 md:px-20 py-20 md:py-16 bg-peach-100 bg-[url("/assets/shared/bg-pattern-three-circles.svg")] text-center'
+      >
+        <h1 class='text-peach-600'>The real deal</h1>
+        <div class='text-[0.9375rem] space-y-6'>
+          <p>
+            As strategic partners in our clients’ businesses, we are ready to
+            take on any challenge as our own. Solving real problems require
+            empathy and collaboration, and we strive to bring a fresh
+            perspective to every opportunity. We make design and technology more
+            accessible and give you tools to measure success.
+          </p>
+          <p>
+            We are visual storytellers in appealing and captivating ways. By
+            combining business and marketing strategies, we inspire audiences to
+            take action and drive real results.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </MainLayout>
