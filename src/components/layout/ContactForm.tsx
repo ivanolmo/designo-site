@@ -37,7 +37,7 @@ function Input(props: InputProps) {
           <input
             className={classNames(
               meta.touched && !meta.error && 'border-b-2',
-              'relative bg-transparent border-b border-white outline-none placeholder-white placeholder-opacity-40 w-full p-2 text-white text-[0.9375rem] font-medium'
+              'relative bg-transparent border-b border-white outline-none placeholder-white placeholder-opacity-40 w-full p-2 md:px-6 md:py-4 text-white text-[0.9375rem] font-medium'
             )}
             {...field}
             {...props}
@@ -46,7 +46,7 @@ function Input(props: InputProps) {
           <textarea
             className={classNames(
               meta.touched && !meta.error && 'border-b-2',
-              'relative bg-transparent border-b border-white outline-none placeholder-white placeholder-opacity-40 w-full p-2 text-white text-[0.9375rem] font-medium resize-none'
+              'relative bg-transparent border-b border-white outline-none placeholder-white placeholder-opacity-40 w-full p-2 md:px-6 md:py-4 text-white text-[0.9375rem] font-medium resize-none'
             )}
             rows={4}
             {...field}
@@ -73,10 +73,10 @@ export default function ContactForm() {
   };
 
   return (
-    <div className='flex flex-col items-center px-6 py-[4.5rem] bg-peach-600 bg-[url("/assets/mobile/contact/bg-pattern-hero-contact-mobile.svg")]'>
-      <div className='flex flex-col items-center gap-6 text-white'>
+    <div className='flex flex-col items-center px-6 md:px-16 py-[4.5rem] bg-peach-600 bg-[url("/assets/mobile/contact/bg-pattern-hero-contact-mobile.svg")] md:bg-[url("/assets/shared/contact/bg-pattern-hero-contact.svg")] md:bg-no-repeat md:bg-[left_-120px_top] md:rounded-2xl'>
+      <div className='flex flex-col items-center md:items-start gap-6 text-white'>
         <h1>Contact Us</h1>
-        <p className='text-[0.9375rem] text-center'>
+        <p className='text-[0.9375rem] md:text-base text-center md:text-start'>
           Ready to take it to the next level? Let’s talk about your project or
           idea and find out how we can help your business grow. If you are
           looking for unique digital experiences that’s relatable to your users,
@@ -107,7 +107,7 @@ export default function ContactForm() {
                   <button
                     type='submit'
                     className='py-4 rounded-lg w-[152px] bg-white
-                    font-medium uppercase cursor-pointer'
+                    font-medium uppercase cursor-pointer md:place-self-end'
                   >
                     Submit
                   </button>
