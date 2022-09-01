@@ -4,21 +4,16 @@ export interface Props {
   buttonBgColor: string;
   buttonTextColor: string;
   buttonHref: string;
-  buttonType?: 'submit';
 }
 
-const {
-  buttonText,
-  buttonBgColor,
-  buttonTextColor,
-  buttonHref,
-  buttonType = 'button',
-} = Astro.props as Props;
+const { buttonText, buttonBgColor, buttonTextColor, buttonHref } =
+  Astro.props as Props;
 ---
 
-<button
-  type={buttonType || 'button'}
-  class={`py-4 rounded-lg w-[152px] ${buttonBgColor} hover:bg-peach-400 ${buttonTextColor} hover:text-white transition-colors duration-300`}
->
-  <a href={buttonHref} class='font-medium uppercase'>{buttonText}</a>
-</button>
+<a href={buttonHref}>
+  <div
+    class={`flex justify-center items-center py-4 rounded-lg w-[152px] ${buttonBgColor} hover:bg-peach-400 ${buttonTextColor} hover:text-white transition-colors duration-300`}
+  >
+    <span class='font-medium uppercase'>{buttonText}</span>
+  </div>
+</a>
