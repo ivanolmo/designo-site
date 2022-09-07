@@ -18,7 +18,7 @@ interface InputProps {
 }
 
 const validationSchema: SchemaOf<Values> = object({
-  name: string().required('Enter a valid name'),
+  name: string().required("Can't be empty"),
   email: string().email('Enter a valid email').required('Enter a valid email'),
   phone: string()
     .required("Can't be empty")
