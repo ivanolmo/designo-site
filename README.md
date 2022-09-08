@@ -4,6 +4,10 @@ This app is a challenge on [Frontendmentor.io](https://www.frontendmentor.io/cha
 
 **View the live app hosted with Vercel:** [https://designo-site-ivan.vercel.app/](https://designo-site-ivan.vercel.app/)
 
+<img src="https://user-images.githubusercontent.com/48425752/189032024-4ecb1921-e7a5-43b2-b9dc-0dc713231cfb.png" width="200">
+<img src="https://user-images.githubusercontent.com/48425752/189032005-754e4b1e-541e-4126-9a36-6ff3b3cd19a3.png" width="400">
+<img src="https://user-images.githubusercontent.com/48425752/189031563-1e2801cf-d1e0-46ef-a6ee-e965a86a19e0.png" width="800">
+
 ## How it's made
 
 **Tech used:** Astro, Preact, TypeScript, TailwindCSS
@@ -74,7 +78,11 @@ All of the image assets provided for this project were `.png` and `.jpg`. I conv
 
 Mobile
 
+![mobile-lighthouse](https://user-images.githubusercontent.com/48425752/189031620-3821ac95-d513-4660-ac36-c28e3043889a.png)
+
 Desktop
+
+![desktop-lighthouse](https://user-images.githubusercontent.com/48425752/189031748-156a0715-03c7-4712-9c83-2f383f065b9c.png)
 
 ## Lessons Learned
 
