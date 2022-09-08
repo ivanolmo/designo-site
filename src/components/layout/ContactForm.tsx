@@ -1,4 +1,3 @@
-import 'preact';
 import { Formik, Form, useField } from 'formik';
 import { object, string, SchemaOf } from 'yup';
 
@@ -12,7 +11,7 @@ interface Values {
 }
 
 interface InputProps {
-  inputType: 'input' | 'textarea';
+  type: 'input' | 'textarea';
   name: string;
   placeholder: string;
 }
@@ -33,7 +32,7 @@ function Input(props: InputProps) {
   return (
     <div className='w-full'>
       <label htmlFor={props.name} className='flex justify-between'>
-        {props.inputType === 'input' ? (
+        {props.type === 'input' ? (
           <input
             className={classNames(
               meta.touched && !meta.error ? 'border-b-2' : 'border-b',
@@ -94,15 +93,15 @@ export default function ContactForm() {
             resetForm();
           }}
         >
-          {(values: Values) => (
+          {() => (
             <>
               <Form>
                 <div className='flex flex-col items-center gap-6 lg:gap-0'>
-                  <Input inputType='input' name='name' placeholder='Name' />
-                  <Input inputType='input' name='email' placeholder='Email' />
-                  <Input inputType='input' name='phone' placeholder='Phone' />
+                  <Input type='input' name='name' placeholder='Name' />
+                  <Input type='input' name='email' placeholder='Email' />
+                  <Input type='input' name='phone' placeholder='Phone' />
                   <Input
-                    inputType='textarea'
+                    type='textarea'
                     name='message'
                     placeholder='Your Message'
                   />

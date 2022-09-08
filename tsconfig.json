@@ -23,11 +23,8 @@
       "@data/*": ["src/data/*"],
       "@layouts/*": ["src/layouts/*"],
       "@style/*": ["src/style/*"],
-      "@astrojs": ["node_modules/@astrojs/"],
-      "react": ["node_modules/preact/compat/"],
-      "react-dom": ["node_modules/preact/compat/"]
+      "@astrojs": ["node_modules/@astrojs/"]
     },
-    "jsx": "react-jsx",
-    "jsxImportSource": "preact"
+    "jsx": "react-jsx"
   }
 }
