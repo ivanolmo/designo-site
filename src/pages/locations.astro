@@ -1,14 +1,45 @@
 ---
 import MainLayout from '@layouts/MainLayout.astro';
-import LocationTile from '@components/ui/LocationTile.astro';
+import LocationTile from '@components/ui/LocationTile';
 import { locationData } from '@data/locationData';
+
+export interface Props {
+  locationData?: {
+    id: string;
+    name: string;
+    address: {
+      name: string;
+      street: string;
+      city: string;
+    };
+    contact: {
+      name: string;
+      phone: string;
+      email: string;
+    };
+    tileImage: {
+      mobile: string;
+      tablet: string;
+      desktop: string;
+    };
+    geolocation: {
+      lat: number;
+      lng: number;
+    };
+  };
+  index: number;
+}
 ---
 
 <MainLayout>
   <section class='space-y-10 md:space-y-28 lg:space-y-8'>
     {
       locationData.map((location, index) => (
-        <LocationTile locationData={location} index={index} />
+        <LocationTile
+          client:only='react'
+          locationData={location}
+          index={index}
+        />
       ))
     }
   </section>
