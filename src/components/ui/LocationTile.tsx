@@ -15,11 +15,6 @@ interface IProps {
       phone: string;
       email: string;
     };
-    tileImage: {
-      mobile: string;
-      tablet: string;
-      desktop: string;
-    };
     geolocation: {
       lat: number;
       lng: number;
