@@ -15,19 +15,12 @@ interface Contact {
   email: string;
 }
 
-interface TileImage {
-  mobile: string;
-  tablet: string;
-  desktop: string;
-}
-
 interface Location {
   id: string;
   name: string;
   address: Address;
   geolocation: Geolocation;
   contact: Contact;
-  tileImage: TileImage;
   image: string;
   withButton: boolean;
 }
@@ -50,11 +43,6 @@ export const locationData: Location[] = [
       phone: '+1 253-863-8967',
       email: 'contact@designo.co',
     },
-    tileImage: {
-      mobile: '/assets/shared/locations/image-map-canada.webp',
-      tablet: '/assets/tablet/locations/image-map-canada.webp',
-      desktop: '/assets/shared/locations/image-map-canada.webp',
-    },
     image: '/assets/shared/components/illustration-canada.svg',
     withButton: true,
   },
@@ -75,11 +63,6 @@ export const locationData: Location[] = [
       phone: '(02) 6720 9092',
       email: 'contact@designo.au',
     },
-    tileImage: {
-      mobile: '/assets/shared/locations/image-map-australia.webp',
-      tablet: '/assets/tablet/locations/image-map-australia.webp',
-      desktop: '/assets/shared/locations/image-map-australia.webp',
-    },
     image: '/assets/shared/components/illustration-australia.svg',
     withButton: true,
   },
@@ -99,11 +82,6 @@ export const locationData: Location[] = [
       name: 'Contact',
       phone: '078 3115 1400',
       email: 'contact@designo.uk',
-    },
-    tileImage: {
-      mobile: '/assets/shared/locations/image-map-united-kingdom.webp',
-      tablet: '/assets/tablet/locations/image-map-united-kingdom.webp',
-      desktop: '/assets/shared/locations/image-map-united-kingdom.webp',
     },
     image: '/assets/shared/components/illustration-united-kingdom.svg',
     withButton: true,
