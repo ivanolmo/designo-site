@@ -4,6 +4,11 @@ interface Address {
   city: string;
 }
 
+interface Geolocation {
+  lat: number;
+  lng: number;
+}
+
 interface Contact {
   name: string;
   phone: string;
@@ -20,6 +25,7 @@ interface Location {
   id: string;
   name: string;
   address: Address;
+  geolocation: Geolocation;
   contact: Contact;
   tileImage: TileImage;
   image: string;
@@ -34,6 +40,10 @@ export const locationData: Location[] = [
       name: 'Designo Central Office',
       street: '3886 Wellington Street',
       city: 'Toronto, Ontario M9C 3J5',
+    },
+    geolocation: {
+      lat: 43.70897190056188,
+      lng: -79.24798156261842,
     },
     contact: {
       name: 'Contact',
@@ -56,6 +66,10 @@ export const locationData: Location[] = [
       street: '19 Balonne Street',
       city: 'New South Wales 2443',
     },
+    geolocation: {
+      lat: -33.11058088110388,
+      lng: 151.63184082232843,
+    },
     contact: {
       name: 'Contact',
       phone: '(02) 6720 9092',
@@ -76,6 +90,10 @@ export const locationData: Location[] = [
       name: 'Designo UK Office',
       street: '13 Colorado Way',
       city: 'Rhyd-y-fro SA8 9GA',
+    },
+    geolocation: {
+      lat: 53.73334265523879,
+      lng: -1.3270570498374588,
     },
     contact: {
       name: 'Contact',
