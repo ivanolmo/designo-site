@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "formik": "^2.2.9",
+    "hamburger-react": "^2.5.0",
     "leaflet": "^1.8.0",
     "react-leaflet": "^4.0.2",
     "yup": "^0.32.11"
