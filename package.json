@@ -10,23 +10,24 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/preact": "^1.0.2",
+    "@astrojs/react": "^1.1.1",
     "@astrojs/tailwind": "^1.0.0",
     "@astrojs/vercel": "^1.0.1",
+    "@types/leaflet": "^1.7.11",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "astro": "^1.0.6",
     "astro-robots-txt": "^0.3.8",
-    "preact": "^10.10.6",
     "prettier": "^2.7.1",
-    "prettier-plugin-astro": "^0.5.0"
-  },
-  "overrides": {
-    "react": "npm:@preact/compat@latest",
-    "react-dom": "npm:@preact/compat@latest"
+    "prettier-plugin-astro": "^0.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "dependencies": {
     "formik": "^2.2.9",
+    "hamburger-react": "^2.5.0",
+    "leaflet": "^1.8.0",
+    "react-leaflet": "^4.0.2",
     "yup": "^0.32.11"
   }
 }
