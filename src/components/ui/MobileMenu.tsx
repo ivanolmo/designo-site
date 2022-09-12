@@ -21,13 +21,19 @@ export default function MobileMenu() {
           `}
         >
           <li>
-            <a href='/about'>Our Company</a>
+            <a href='/about' className='hover-underline-animation dark-bg'>
+              Our Company
+            </a>
           </li>
           <li>
-            <a href='/locations'>Locations</a>
+            <a href='/locations' className='hover-underline-animation dark-bg'>
+              Locations
+            </a>
           </li>
           <li>
-            <a href='/contact'>Contact</a>
+            <a href='/contact' className='hover-underline-animation dark-bg'>
+              Contact
+            </a>
           </li>
         </ul>
       </nav>
