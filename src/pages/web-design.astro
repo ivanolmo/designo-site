@@ -14,7 +14,7 @@ import DesignCard from '@components/ui/DesignCard.astro';
     </p>
   </div>
   <section
-    class='px-6 mt-24 space-y-10 md:px-0 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8'
+    class='px-6 mt-24 space-y-10 md:px-0 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8 relative'
   >
     <DesignCard
       image='/assets/shared/web-design/image-express.webp'
@@ -46,6 +46,10 @@ import DesignCard from '@components/ui/DesignCard.astro';
       title='Camp'
       description='Get expert training in coding, data, design, and digital marketing'
     />
+    <div
+      class='h-[600px] w-full lg:bg-[url("/assets/shared/bg-pattern-leaf.svg")] bg-no-repeat absolute -top-64 right-44 -z-50'
+    >
+    </div>
   </section>
   <section class='flex flex-col gap-6 px-6 mt-24 lg:flex-row md:px-0'>
     <div class='relative w-full group'>

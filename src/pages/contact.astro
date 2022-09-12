@@ -7,7 +7,13 @@ import { locationData } from '@data/locationData';
 
 <MainLayout>
   <ContactForm client:load />
-  <section class='space-y-10 lg:space-y-0 mt-28 lg:flex lg:justify-evenly'>
+  <section
+    class='space-y-10 lg:space-y-0 mt-28 lg:flex lg:justify-evenly relative'
+  >
     {locationData.map((location) => <BorderlessCard data={location} />)}
+    <div
+      class='h-[600px] w-full lg:bg-[url("/assets/shared/bg-pattern-leaf.svg")] bg-no-repeat absolute -bottom-80 left-64 -z-50'
+    >
+    </div>
   </section>
 </MainLayout>

@@ -7,7 +7,7 @@ import { valuesData } from '@data/valuesData';
 
 <MainLayout>
   <section
-    class='flex flex-col lg:flex-row items-center gap-3.5 bg-peach-600 px-6 md:px-24 pt-20 lg:py-36 text-white bg-[url("/assets/shared/home/bg-pattern-hero-home.svg")] bg-[top_100px_left] md:bg-[top_100px_right] lg:bg-right-top bg-no-repeat overflow-hidden md:rounded-2xl'
+    class='flex flex-col lg:flex-row items-center gap-3.5 bg-peach-600 px-6 md:px-24 pt-20 lg:py-[136px] text-white bg-[url("/assets/shared/home/bg-pattern-hero-home.svg")] bg-[top_100px_left] md:bg-[top_100px_right] lg:bg-right-top bg-no-repeat overflow-hidden md:rounded-2xl'
   >
     <div
       class='flex flex-col items-center gap-6 text-center lg:items-start lg:text-start'
@@ -38,7 +38,9 @@ import { valuesData } from '@data/valuesData';
       />
     </div>
   </section>
-  <section class='grid grid-cols-1 gap-6 px-6 lg:grid-cols-2 md:px-0 mt-28'>
+  <section
+    class='grid grid-cols-1 gap-6 px-6 lg:grid-cols-2 md:px-0 mt-40 relative'
+  >
     <div class='relative group lg:row-span-2'>
       <a href='/web-design'>
         <div
@@ -111,10 +113,18 @@ import { valuesData } from '@data/valuesData';
         </div>
       </a>
     </div>
+    <div
+      class='h-[600px] w-full lg:bg-[url("/assets/shared/bg-pattern-leaf.svg")] bg-no-repeat absolute -top-[450px] right-64 -z-50'
+    >
+    </div>
   </section>
   <section
-    class='flex flex-col items-center gap-20 px-6 lg:flex-row lg:justify-evenly lg:gap-12 md:px-0 mt-28'
+    class='flex flex-col items-center gap-20 px-6 lg:flex-row lg:justify-evenly lg:gap-12 md:px-0 mt-40 relative'
   >
     {valuesData.map((value) => <BorderlessCard data={value} />)}
+    <div
+      class='h-[600px] w-full lg:bg-[url("/assets/shared/bg-pattern-leaf.svg")] bg-no-repeat absolute -bottom-80 left-56 -z-50 rotate-180'
+    >
+    </div>
   </section>
 </MainLayout>
